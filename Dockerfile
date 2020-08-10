@@ -7,7 +7,7 @@ RUN apt-get update \
 RUN git clone --depth 1 https://github.com/neologd/mecab-ipadic-neologd.git \
     && cd mecab-ipadic-neologd \
     && bin/install-mecab-ipadic-neologd -n -y
-RUN pip install mecab-python3 WordCloud
+RUN pip install mecab-python3==0.996.5 WordCloud unidic-lite
 
 # nodejsの導入
 RUN curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - \
